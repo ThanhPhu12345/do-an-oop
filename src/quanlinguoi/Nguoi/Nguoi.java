@@ -1,4 +1,4 @@
-package Nguoi; // Định nghĩa package là Nguoi
+package quanlinguoi.Nguoi; // Định nghĩa package là Nguoi
 
 import java.io.Serializable; // Nhập khẩu Serializable để cho phép đối tượng của lớp này có thể được tuần tự hóa
 
