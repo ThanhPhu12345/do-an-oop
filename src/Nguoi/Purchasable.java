@@ -1,4 +1,3 @@
-
 package Nguoi;
 
 public interface Purchasable {
