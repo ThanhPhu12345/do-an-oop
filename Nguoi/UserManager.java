@@ -112,8 +112,9 @@ public class UserManager {
             System.out.printf("Tổng số người dùng: %d\n", count);
 
             // Hiển thị tiêu đề cho bảng
-            System.out.printf("%-10s %-20s %-30s %-15s %-15s%n", "ID", "Tên", "Địa chỉ", "Số điện thoại", "Username");
-            System.out.println("-------------------------------------------------------------------------------");
+            System.out.printf("%-15s %-25s %-30s %-15s %-15s%n", "ID", "Tên", "Địa chỉ", "Số điện thoại", "Username");
+            System.out.println(
+                    "---------------------------------------------------------------------------------------------------------");
 
             for (User user : userList) {
                 displayUserInfo(user);
