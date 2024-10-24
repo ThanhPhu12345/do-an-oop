@@ -12,17 +12,17 @@ import quanliSanPham.sanpham.LinhKienMayTinh.RAM;
 import quanliSanPham.sanpham.LinhKienMayTinh.VGA;
 
 public class ProductReader {
-  private static final String cpuListFile = "cpu_list.csv";
-  private static final String mainListFile = "main_list.csv";
-  private static final String ramListFile = "ram_list.csv";
-  private static final String psuListFile = "psu_list.csv";
-  private static final String vgaListFile = "vga_list.csv";
+  private static final String CPU_FILE = "cpu_list.csv";
+  private static final String MAIN_FILE = "main_list.csv";
+  private static final String RAM_FILE = "ram_list.csv";
+  private static final String PSU_FILE = "psu_list.csv";
+  private static final String VGA_FILE = "vga_list.csv";
 
   public static ArrayList<CPU> getCpuList() {
     ArrayList<CPU> cpu = new ArrayList<CPU>();
     BufferedReader br;
     try {
-      br = new BufferedReader(new FileReader(cpuListFile));
+      br = new BufferedReader(new FileReader(CPU_FILE));
       String line = null;
       while ((line = br.readLine()) != null) {
         String[] Split = line.split(",");
@@ -44,7 +44,7 @@ public class ProductReader {
     ArrayList<Mainboard> main = new ArrayList<Mainboard>();
     BufferedReader br;
     try {
-      br = new BufferedReader(new FileReader(mainListFile));
+      br = new BufferedReader(new FileReader(MAIN_FILE));
       String line = null;
       while ((line = br.readLine()) != null) {
         String[] Split = line.split(",");
@@ -65,7 +65,7 @@ public class ProductReader {
     ArrayList<PSU> psu = new ArrayList<PSU>();
     BufferedReader br;
     try {
-      br = new BufferedReader(new FileReader(mainListFile));
+      br = new BufferedReader(new FileReader(PSU_FILE));
       String line = null;
       while ((line = br.readLine()) != null) {
         String[] Split = line.split(",");
@@ -86,7 +86,7 @@ public class ProductReader {
     ArrayList<RAM> ram = new ArrayList<RAM>();
     BufferedReader br;
     try {
-      br = new BufferedReader(new FileReader(mainListFile));
+      br = new BufferedReader(new FileReader(RAM_FILE));
       String line = null;
       while ((line = br.readLine()) != null) {
         String[] Split = line.split(",");
@@ -108,7 +108,7 @@ public class ProductReader {
     ArrayList<VGA> vga = new ArrayList<VGA>();
     BufferedReader br;
     try {
-      br = new BufferedReader(new FileReader(mainListFile));
+      br = new BufferedReader(new FileReader(VGA_FILE));
       String line = null;
       while ((line = br.readLine()) != null) {
         String[] Split = line.split(",");
