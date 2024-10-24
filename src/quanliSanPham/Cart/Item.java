@@ -1,9 +1,12 @@
 package quanliSanPham.Cart;
 
+//import java.util.Objects;
+
 import quanliSanPham.Product;
 
 public abstract class Item {
   protected Product product;
+  //protected String productCode;
 
   // default constructor
   protected Item() {
@@ -14,6 +17,8 @@ public abstract class Item {
   protected Item(Product product) {
     this.product = product;
   }
+
+  abstract Product getProduct();
 
   abstract void showItemSpecs();
 
@@ -28,4 +33,6 @@ public abstract class Item {
   abstract void addItem(Product product);
 
   abstract Integer getTotalPrice();
+
+  //abstract boolean equals(Objects obj);
 }

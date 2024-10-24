@@ -1,5 +1,7 @@
+// CartItem class work as a container in ShoppingCart's ArrayList
 package quanliSanPham.Cart;
 
+import java.util.Objects;
 import quanliSanPham.Product;
 
 public class CartItem extends Item {
@@ -14,7 +16,16 @@ public class CartItem extends Item {
   // constructor
   public CartItem(Product product) {
     super(product);
-    this.quantityOfProduct = 0;
+    if (product != null) {
+      this.quantityOfProduct = 1;
+    } else {
+      this.quantityOfProduct = 0;
+    }
+  }
+
+  @Override
+  public Product getProduct() {
+    return this.product;
   }
 
   @Override
@@ -52,12 +63,6 @@ public class CartItem extends Item {
     return "36 months";
   }
 
-  public boolean isProductNull() {
-    if (this.product == null)
-      return true;
-    return false;
-  }
-
   public void increaseQuantity() {
     this.quantityOfProduct += 1;
   }
@@ -68,5 +73,20 @@ public class CartItem extends Item {
       return;
     }
     this.quantityOfProduct = quantity;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null || getClass() != obj.getClass())
+      return false;
+    Product item = (Product) obj;
+    return Objects.equals(item.getProductModel(), this.product.getProductModel());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(this.product.getProductModel());
   }
 }
